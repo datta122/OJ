@@ -1,0 +1,137 @@
+:root {
+  --tw-bg-opacity: 1;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(12, 12, 12, 0.95);
+  color: #fff;
+  padding: 15px 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.navbar-brand:hover {
+  color: #ccc;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-link {
+  font-size: 1.1rem;
+  margin-left: 25px;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.navbar-link:hover {
+  color: #1e90ff; /* Blue on hover */
+  text-decoration: underline;
+}
+
+.navbar-item {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  z-index: 1000;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.navbar-item:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-item {
+  padding: 15px 20px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.1rem;
+  transition: background-color 0.3s;
+}
+
+.dropdown-item:hover {
+  background-color: #555;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .navbar-left, .navbar-right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbar-right {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .navbar-item {
+    position: relative;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-link {
+    margin: 5px 0;
+    font-size: 1rem;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .dropdown-menu {
+    position: static; /* Position dropdown relative to its parent */
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+    background-color: #333; /* Match the navbar's background */
+    border-radius: 4px;
+    box-shadow: none;
+    display: block;
+  }
+
+  .dropdown-item {
+    font-size: 1rem;
+    color: #fff;
+    padding: 10px 4px;
+  }
+}
+

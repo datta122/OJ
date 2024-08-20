@@ -1,0 +1,336 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #282c34;
+  color: #e1e4e8;
+  overflow-x: hidden;
+}
+
+/* Main Container */
+.problem-details-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1e2029;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  color: #f8f9fa;
+  position: relative;
+}
+
+/* Responsive Layout */
+@media (min-width: 768px) {
+  .problem-details-page {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .left-half, .right-half {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1200px) {
+  .problem-details-page {
+    padding: 40px;
+  }
+
+  .left-half, .right-half {
+    padding: 30px;
+  }
+}
+
+/* Flex Grow for Equal Height */
+.left-half, .right-half {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Center Problem Heading */
+.left-half .problem-name {
+  font-size: 2rem;
+  color: #e8eaf6;
+  margin: 20px 0;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Left Half Styles */
+.left-half .problem-details-container {
+  background-color: #21232e;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  color: #e4e6eb;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.left-half .problem-statement {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  white-space: pre-wrap;
+}
+
+.left-half .code-block {
+  background-color: #2a2d36;
+  padding: 15px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  white-space: pre-wrap;
+  font-family: 'Courier New', Courier, monospace;
+  color: #e0e0e0;
+  overflow-x: auto;
+}
+
+.left-half .problem-info {
+  display: flex;
+  flex-direction: column;
+  color: #c4c4c4;
+}
+
+.left-half .info-item {
+  margin-bottom: 14px;
+}
+
+.left-half .info-label {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.left-half .info-value {
+  font-size: 1rem;
+}
+
+/* Right Half Styles */
+.right-half {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right-half .code-editor-container {
+  width: 100%;
+}
+
+.right-half .select-language {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid #555;
+  border-radius: 6px;
+  background-color: #2b2b2b;
+  color: #d0d0d0;
+  transition: border-color 0.3s;
+}
+
+.right-half .select-language:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+.right-half .code-editor {
+  width: 100%;
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  border-radius: 6px;
+  margin-bottom: 1.2rem;
+  height: 60vh;
+}
+
+.right-half .button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 1.2rem;
+}
+
+.right-half .button-container .run-button, .submit-button {
+  width: 48%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.right-half .run-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.right-half .submit-button {
+  background-color: #2196f3;
+  color: white;
+}
+
+.right-half .run-button:hover {
+  background-color: #45a049;
+  transform: scale(1.02);
+}
+
+.right-half .submit-button:hover {
+  background-color: #1976d2;
+  transform: scale(1.02);
+}
+
+.right-half .tabs {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1.2rem;
+}
+
+.right-half .tabs .tab-button {
+  width: 25%;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #3d0ee6;
+  color: #f1f1f1;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-bottom: 0.6rem;
+}
+
+.right-half .tabs .tab-button.active {
+  background-color: #5b5b5b;
+}
+
+.right-half .tabs .tab-button:hover {
+  background-color: #2c2c2c;
+  transform: scale(1.02);
+}
+
+.right-half .tab-content {
+  width: 100%;
+  background-color: #2c2f36;
+  padding: 1.2rem;
+  border-radius: 6px;
+  color: #e4e6eb;
+}
+
+
+.right-half .input-container, .output-container, .verdict-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1.2rem;
+}
+
+.right-half .input-container, .output-container, .verdict-container {
+  width: 95%;
+}
+.right-half .input-container{
+  width: 100%;
+}
+
+.right-half .input-heading, .output-heading, .verdict-heading {
+  font-size: 1.125rem;
+  margin-right: 1rem;
+  color: #d0d0d0;
+  flex-shrink: 0;
+  width: 20%;
+  align-self: center;
+}
+
+.right-half .input-textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #666;
+  border-radius: 6px;
+  resize: none;
+  height: 150px;
+  background-color: #2b2b2b;
+  color: #d0d0d0;
+  box-sizing: border-box;
+}
+
+.right-half .output-container pre, .verdict-container pre {
+  background-color: #1e1e1e;
+  padding: 15px;
+  border: 1px solid #444;
+  border-radius: 6px;
+  white-space: pre-wrap;
+  font-family: 'Courier New', Courier, monospace;
+  color: #d0d0d0;
+  height: 150px;
+  overflow-y: auto;
+  width: 100%;
+}
+
+/* Adjust widths for different sections */
+.right-half .input-container, .right-half .output-container, .right-half .verdict-container {
+  flex-direction: column;
+  flex: 1;
+  margin-right: 10px;
+}
+
+/* Additional Responsive Design */
+@media (max-width: 767px) {
+  .problem-details-page {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .left-half, .right-half {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .left-half .problem-name {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+
+  .left-half .problem-statement {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .right-half .code-editor {
+    height: 40vh;
+    margin-bottom: 10rem;
+  }
+
+  .right-half .input-textarea {
+    height: 100px;
+  }
+
+  .right-half .output-container pre, .right-half .verdict-container pre {
+    height: 100px;
+    width: 90%;
+
+  }
+
+  .right-half .button-container {
+    flex-direction: column;
+  }
+
+  .right-half .button-container .run-button, .right-half .submit-button {
+    width: 100%;
+    margin-bottom: 0.4rem;
+  }
+
+  .right-half .input-heading, .right-half .output-heading, .right-half .verdict-heading {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+    width: auto;
+  }
+
+  .right-half .input-container, .right-half .output-container, .right-half .verdict-container {
+    flex-direction: column;
+  }
+}

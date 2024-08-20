@@ -1,0 +1,90 @@
+.center-container {
+  background-color: rgba(20, 20, 40, 0.95); /* Darker background with high opacity */
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #e0e0e0; /* Light gray text color for contrast */
+}
+
+.profile-container {
+  background-color: #1f1f1f; /* Slightly lighter background for the card */
+  padding: 40px;
+  border-radius: 16px; /* Rounded corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+  width: 100%;
+  max-width: 400px; /* Reduced width for a narrower box */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align contents */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effects */
+}
+
+.profile-container:hover {
+  transform: translateY(-5px); /* Slight lift effect */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+}
+
+h2 {
+  margin-bottom: 20px; /* Space below the heading */
+  text-align: center; /* Center align the heading */
+  font-size: 1.5rem; /* Appropriate font size for heading */
+  color: #00bcd4 !important; /* Cyan color for heading */
+}
+
+.profile-details {
+  text-align: left; /* Align text to the left */
+  margin-bottom: 20px; /* Space before the button */
+  width: 100%;
+}
+
+.profile-details p {
+  margin: 16px 0; /* Increased margin for better spacing */
+  font-size: 1.2rem; /* Increased font size */
+  display: flex;
+  justify-content: flex-start;
+}
+
+.profile-details p strong {
+  color: #00bcd4; /* Cyan color for key labels */
+  min-width: 150px; /* Set a fixed width for the labels to add gap */
+}
+
+.profile-details p span {
+  margin-left: 30px; /* Increased space between label and content */
+}
+
+.edit-profile-btn {
+  background-color: #00bcd4; /* Cyan button color */
+  color: #fff;
+  padding: 12px 24px; /* Button padding */
+  border: none;
+  border-radius: 8px; /* Rounded button */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  font-size: 1.1rem; /* Button font size */
+  margin-top: 30px; /* Space above the button for uniformity */
+  align-self: center; /* Center the button */
+}
+
+.edit-profile-btn:hover {
+  background-color: #0097a7; /* Darker cyan on hover */
+  transform: scale(1.05); /* Slight scaling effect */
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .profile-details p {
+    font-size: 1.1rem;
+  }
+
+  .edit-profile-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
